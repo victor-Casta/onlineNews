@@ -1,0 +1,148 @@
+$primary-soft-orange: hsl(35, 77%, 62%)
+$primary-soft-red: hsl(5, 85%, 63%)
+$neutral-off-white: hsl(36, 100%, 99%)
+$neutral-Grayish-bue: hsl(233, 8%, 79%)
+$neutral-dark-Grayish-blue: hsl(236, 13%, 42%)
+$neutral-dark-blue: hsl(240, 100%, 5%)
+$principal-font: 'Inter', sans-serif
+$paragrhap: 15px
+body
+  margin: 0
+  padding: 0
+  background-color: white
+  font-family: $principal-font
+
+main
+  max-width: 1300px
+  min-width: 317px
+  margin: 0 auto
+
+header
+  width: 100%
+  height: 10vh
+  display: grid
+  grid-template-columns: 1fr 1fr
+  align-items: center
+  .icon-container
+    padding: 0 0 0 30px
+  nav
+    display: flex
+    padding: 0 20px 0 0
+    ul
+      display: flex
+      li
+        margin: 0 1.5rem
+        list-style: none
+        a
+          text-decoration: none
+          font-weight: 900
+          font-size: 18px
+          color: $neutral-dark-blue
+  .burguer-menu
+    display: none
+
+.principal-content
+  width: 100%
+  display: grid
+  grid-template-columns: 4fr 2fr
+  grid-template-rows: 2fr
+  .principal-news
+    width: 95%
+    .data-news
+      display: flex
+      align-items: start
+      padding: 2rem 0 0 0
+      h1
+        width: 40%
+        font-size: 3rem
+        padding: 0 2rem 0 0
+        margin: 0
+      .content-news
+        width: 60%
+        height: 100%
+        display: flex
+        flex-direction: column
+        p 
+          margin: 0
+          font-size: $paragrhap
+        button
+          width: 50%
+          height: 3rem
+          margin: 3rem 0 0 0
+          background: $primary-soft-red
+          border: 0
+          text-transform: uppercase
+          letter-spacing: 0.5em
+          color: $neutral-off-white
+    img
+      width: 100%
+      object-fit: cover
+  aside
+    width: 95%
+    padding: 1rem 2rem
+    background-color: $neutral-dark-blue
+    h2
+      color: $primary-soft-orange
+      font-size: 2rem
+      margin: 1rem 0 3rem 0
+    article
+      margin: 0 0 2rem 0
+      border-bottom: 1px solid $neutral-off-white
+      h3
+        color: $neutral-off-white
+        font-size: 1.3rem
+      p 
+        color: $neutral-off-white
+        font-size: $paragrhap
+  .popular-news
+    width: 100%
+    margin-top: 5rem
+    display: flex
+    grid-column: span 2
+    article
+      display: flex
+      align-items: center
+      margin: 0 2rem 0 0
+      .picture img
+        width: 9rem
+        object-fit: cover
+      .description
+        padding: 0 0 0 1.4rem
+        .number-item
+          font-size: 2rem
+          margin: 0 0 1.4rem 0
+          padding: 0
+          font-weight: 800
+          color: $neutral-Grayish-bue
+        h2
+          margin: 0 0 1rem 0
+          padding: 0
+          font-size: 20px
+          color: $neutral-dark-blue
+        .description-item
+          line-height: 1.3rem
+          color: $neutral-dark-blue
+
+
+
+@media (max-width: 800px)
+  header nav
+    display: none
+  header .burguer-menu
+    display: block
+    margin: 0 auto
+  .principal-content
+    display: flex
+    flex-direction: column
+    align-items: center
+    .data-news
+      width: 100%
+      margin: 0 0 3rem 0
+      flex-direction: column
+      h1
+        width: 100% !important
+      .content-news
+        width: 100% !important
+    .popular-news
+      flex-direction: column
+
